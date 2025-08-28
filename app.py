@@ -84,7 +84,7 @@ if user_input and not st.session_state.ended:
         # Basic validation
         if current_step == "Email" and "@" not in user_input:
             bot_reply = fallback_response(user_input)
-        elif current_step == "Phone Number" and (not user_input.isdigit() or len(user_input) < 10):
+        elif current_step == "Phone Number" and (not user_input.isdigit() or len(user_input) != 10):
             bot_reply = fallback_response(user_input)
         else:
             # Save response
@@ -120,4 +120,5 @@ if user_input and not st.session_state.ended:
                 st.markdown(st.session_state.questions)
             else:
                 st.write("Generating questions...")
+
 
