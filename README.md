@@ -45,21 +45,21 @@ It collects candidate details step by step, validates inputs, and generates **ta
 
 ## 📂 Project Structure
 
-  hiring-assistant-bot/
-  │── app.py                # Main Streamlit app
-  │── requirements.txt      # Dependencies
-  │── README.md             # Documentation
-  │
-  ├── config/
-  │   └── settings.py       # API key loading
-  │
-  ├── core/
-  │   ├── prompts.py        # Prompt templates
-  │   ├── utils.py          # Masking + data storage
-  │   ├── chatbot.py        # Chatbot logic (calls Cohere, manages responses)
-  │
-  ├── data/
-  │   └── candidates.json   # Simulated storage (anonymized)
+        hiring-assistant-bot/
+        │── app.py                # Main Streamlit app
+        │── requirements.txt      # Dependencies
+        │── README.md             # Documentation
+        │
+        ├── config/
+        │   └── settings.py       # API key loading
+        │
+        ├── core/
+        │   ├── prompts.py        # Prompt templates
+        │   ├── utils.py          # Masking + data storage
+        │   ├── chatbot.py        # Chatbot logic (calls Cohere, manages responses)
+        │
+        ├── data/
+        │   └── candidates.json   # Simulated storage (anonymized)
 
 
 ---
@@ -83,6 +83,7 @@ COHERE_API_KEY=your_api_key_here
 
 4. Run the App
 streamlit run app.py
+
 
 
 
