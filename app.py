@@ -61,7 +61,7 @@ def fallback_response(user_input):
     Provide a polite, professional fallback response,
     asking them to clarify while keeping the flow of the interview.
     """
-    response = co.chat(model="command-r", message=prompt)
+    response = co.chat(model="command-a-03-2025", message=prompt)
     return response.text.strip()
 
 # Chat input
@@ -120,5 +120,6 @@ if user_input and not st.session_state.ended:
                 st.markdown(st.session_state.questions)
             else:
                 st.write("Generating questions...")
+
 
 
