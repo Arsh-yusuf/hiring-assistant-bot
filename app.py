@@ -124,7 +124,11 @@ def validate_input(step_name, user_input):
         return validate_with_llm("Full Name", user_input)
     
     if step_name == "Email":
-        return "@" in user_input and "." in user_input
+        # First check basic syntax
+        if "@" not in user_input or "." not in user_input:
+            return False
+        # Then check professionalism/plausibility with LLM
+        return validate_with_llm("Email address (ensure it is professional and not profane)", user_input)
     if step_name == "Phone Number":
         # Strip common formatting characters
         clean_phone = user_input.replace("+", "").replace("-", "").replace(" ", "").replace("(", "").replace(")", "")
